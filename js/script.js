@@ -1,27 +1,38 @@
-alert('Hello world');
-
-let favoriteFood = [
+let pokemonList = [
     {
-        name: 'Fruit',
-        type: 'Tropical',
+        name: 'Bulbasaur',
+        hight: 0.7,
+        type: ['grass' , 'poison'],
 
 
     },
     {
-        name: 'SeaFood',
-        type: ['Fish','OctopusSalat', 'Squid'],
+        name: 'Snorlax',
+        height: 2.1,
+        type: ['normal'],
+          
+      },
+      {
+        name: 'Charizard',
+        height: 1.7,
+        type: ['fire','flying'],
+       
+      },
+      {
+        name: 'Mewtwo',
+        height: 2.0,
+        type: ['psychic'],
+       
+      },
+   
 
-    },
-    
-    
-     
+
 
 ];
 document.write('<ul>');
 
-for (let i = 0; i < favoriteFood.length; i++){
-    document.write('<li>');
-    document.write(favoriteFood[i].name + ' ( ' + favoriteFood[i].type + ')');
+for (let i = 0; i < pokemonList.length; i++) {
+    document.write('<li>' + pokemonList[i].name + ' ( ' + pokemonList[i].type + ')');
 
     document.write('</li>');
 }
