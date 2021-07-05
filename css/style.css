@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
     margin: 0px;
-    padding: 0px;
+    padding: 10px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
  }
@@ -13,8 +13,20 @@
      align-items: center;
      height: 50vh;
      color: indigo;
+     line-height: 1.7;
  
  }
- h1 {
-     color: red;
- }
+
+ 
+ .logo {
+    width: 300px;
+    height: auto;
+    margin: 10px;
+    text-align: center;
+  }
+ 
+  #logo-container {
+    text-align: center;
+    margin-top: 100px;
+  }
+ 
