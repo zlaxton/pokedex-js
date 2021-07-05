@@ -29,6 +29,7 @@ let pokemonList = [
 
 
 ];
+
 //Unordered (buleted) list
 document.write('<ul>');
 //The initialization, The condition, The action
