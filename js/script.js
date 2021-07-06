@@ -30,19 +30,32 @@ let pokemonList = [
 
 ];
 
-//Unordered (buleted) list
+
 document.write('<ul>');
+
+let result 
+
 //The initialization, The condition, The action
+
 for (let i = 0; i < pokemonList.length; i++) {
-  //Writes Pokemon name to the DOM, list items (Definition list)
-  document.write('<li>' + pokemonList[i].name + ' ( height :  ' + pokemonList[i].height + ') </li>');
-  //Checks if pokemon height is greater than 2 
+
+  let pokemon = `${pokemonList[i].name}  ( height : ${pokemonList[i].height} )`
+
   if (pokemonList[i].height > 2)
-    //if pokemon height is greater than 1.6 m, writes "Wow that's big!"
-    document.write(" - Wow, that's big!");
-  //if pokemon is greater than 1 and lower than 2 writes "This is an average height"
-  else if (pokemonList[i].height > 1 && pokemonList[i].height < 2) 
-    document.write(" - This is an average height");
 
+    result = `${ pokemon } - Wow, that's big!)`;
 
+  else if (pokemonList[i].height > 1 && pokemonList[i].height < 2)
+
+    result = `${pokemon} - This is an avarage height)`;
+
+  else {
+    result = pokemon
   }
+
+  document.write('<li>' + result + '</li>')
+
+
+}
+
+document.write('</ul>')
