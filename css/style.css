@@ -6,9 +6,10 @@
 }
 
 body {
+  background-color: lightblue;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin: auto;
   align-items: center;
   height: 50vh;
   color: indigo;
@@ -24,12 +25,11 @@ body {
 
 #logo-container {
   text-align: center;
-  margin-top: 200px;
+  margin-top: 50px;
 }
 
 .button-class {
-  
-  background-color: green;
+  border-radius: 15px;
   border: none;
   color: white;
   padding: 16px 32px;
@@ -44,6 +44,14 @@ body {
   background-color: yellow;
   color: black;
   border: 2px solid green;
+  box-shadow: 0 9px #999;
 }
 
+.button-class:hover {background-color: rgb(255, 219, 14)}
 
+.button-class:active {
+  background-color: rgb(92, 177, 14);
+  box-shadow: 0 5px #666;
+  transform: translateY(2px);
+  
+}
