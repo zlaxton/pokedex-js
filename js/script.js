@@ -6,7 +6,8 @@ let pokemonRepository = (function () {
   function add(pokemon) {
     if (
       typeof pokemon === "object" &&
-      "name" in pokemon 
+      "name" in pokemon &&
+      "detailsUrl" in pokemon
 
     ) {
       pokemonList.push(pokemon);
@@ -28,7 +29,7 @@ let pokemonRepository = (function () {
     button.classList.add("button-class");
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
-    button.addEventListener("click", function (e) {
+    button.addEventListener("click", function (event) {
       showDetails(pokemon);
     });
   }
@@ -43,6 +44,7 @@ let pokemonRepository = (function () {
           detailsUrl: item.url
         };
         add(pokemon);
+        console.log(pokemon);
       });
     }).catch(function (e) {
       console.error(e);
@@ -56,15 +58,16 @@ function loadDetails(item) {
     item.imageUrl = details.sprites.front_default;
     item.height = details.height;
     item.types = details.types;
+    
   }).catch(function (e) {
     console.error(e);
   });
 }
 
 function showDetails(item) {
-  pokemonRepository.loadDetails(item).then(function () {
+  loadDetails(item) 
     
-  });
+  
 }
 
 
