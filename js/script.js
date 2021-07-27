@@ -109,7 +109,7 @@ let pokemonRepository = (function () {
     let weightElement = $("<p>" + "weight : " + pokemon.weight + "</p>");
     
     let abilitiesElement = $("<p>" + "abilities : " + pokemon.weight + "</p>");
-    let typesElement = $("<p>" + "types : " + pokemon.types + "</p>");
+    let typesElement = $("<p>" + "types : " + pokemon.types.map(pokemon=>pokemon.type.name) + "</p>");
 
 
 
@@ -131,6 +131,7 @@ let pokemonRepository = (function () {
   //add event listener to search bar
   searchInput.addEventListener("input", function () {
     let listPokemon = document.querySelectorAll("li");
+    //let listPokemon = $('li');
     let value = searchInput.value.toUpperCase();
 
     listPokemon.forEach(function (pokemon) {
