@@ -3,6 +3,9 @@
 
 ### This app was created as a study project during my Fullstack Webdeveloper course @CarrerFoundry.
 
+## Live demo
+[Pokedex app](https://zlaxton.github.io/pokedex-js/)
+
 # Features
 - Load Pokemon data from a public external API
 - Render a button for each Pokemon
